@@ -3,6 +3,7 @@
 # print(book1)
 
 with open('./books/the-time-machine.txt', 'r', encoding='utf-8') as file:
-    book1 = file.read()
+  book1 = file.read()
 
 print(book1)
+print('CHARACTERS: ', len(book1))
