@@ -33,13 +33,14 @@ print('FIRST 50 WORDS:', words[:50])
 
 word_lengths = np.zeros(len(words))
 
-for word_instance in range (len(words)):
-  word_lengths[word_instance] = len(words[word_instance])
+for word_pos in range (len(words)):
+  word_lengths[word_pos] = len(words[word_pos])
 
 plt.hist(word_lengths, bins=30)
 plt.xlabel('Word lengths')
 plt.ylabel('Word count')
 plt.show()
+
 
 
 
