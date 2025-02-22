@@ -1,3 +1,4 @@
+import numpy as np
 import re
 
 with open('./books/the-time-machine.txt', 'r', encoding='utf-8') as file:
@@ -28,4 +29,29 @@ print('CLEANED UP TEXT (FIRST 100 CHARACTERS): ', book_1[:100])
 words = book_1.split()
 print('NUMBER OF WORDS: ', len(words))
 print('FIRST 50 WORDS:', words[:50])
+
+word_lengths = np.zeros(len(words))
+
+for word_instance in range (len(words)):
+  word_lengths[word_instance] = len(words[word_instance])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
