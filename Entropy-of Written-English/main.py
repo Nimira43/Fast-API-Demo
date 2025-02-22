@@ -36,6 +36,8 @@ word_lengths = np.zeros(len(words))
 for word_instance in range (len(words)):
   word_lengths[word_instance] = len(words[word_instance])
 
+plt.plot(word_lengths, 'o')
+plt.show()
 
 
 
