@@ -8,7 +8,7 @@ with open('./books/the-time-machine.txt', 'r', encoding='utf-8') as file:
   book_1 = file.read()
 
 print('CHARACTERS: ', len(book_1))
-print('FIRST 2000 CHARACTERS: ', book_1[:2000])
+print('FIRST 100 CHARACTERS: ', book_1[:100])
 
 strings_to_replace = [
   '\r\n\r\nâ\x80\x9c', 
@@ -26,10 +26,10 @@ for strings_to_match in strings_to_replace :
   book_1 = regular_expression.sub(' ', book_1)
 
 print('--------------------------------------')
-print('REMOVED FORMATTING FROM TEXT (FIRST 2000): ', book_1[:2000])
+print('REMOVED FORMATTING FROM TEXT (FIRST 100): ', book_1[:100])
 
 book_1 = re.sub(r'\s+', ' ', book_1)
 book_1 = book_1.strip()
 
 print('--------------------------------------')
-print('REMOVED WHITESPACE FROM TEXT (FIRST 2000): ', book_1[:2000])
+print('REMOVED WHITESPACE FROM TEXT (FIRST 100): ', book_1[:100])
