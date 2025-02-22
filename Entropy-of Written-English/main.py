@@ -18,12 +18,18 @@ strings_to_replace = [
   'â\x80\x94',         
   'â\x80\x99',         
   'â\x80\x98',         
-  '_',                 
+  '_',                
 ]
 
 for strings_to_match in strings_to_replace :
   regular_expression = re.compile(r'%s' %strings_to_match)
   book_1 = regular_expression.sub(' ', book_1)
-  
+
 print('--------------------------------------')
-print('MODIFIED CHARACTERS (FIRST 2000): ', book_1[:2000])
+print('REMOVED FORMATTING FROM TEXT (FIRST 2000): ', book_1[:2000])
+
+book_1 = re.sub(r'\s+', ' ', book_1)
+book_1 = book_1.strip()
+
+print('--------------------------------------')
+print('REMOVED WHITESPACE FROM TEXT (FIRST 2000): ', book_1[:2000])
