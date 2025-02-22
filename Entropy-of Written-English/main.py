@@ -1,4 +1,5 @@
 import numpy as np
+import matplotlib.pyplot as plt
 import re
 
 with open('./books/the-time-machine.txt', 'r', encoding='utf-8') as file:
