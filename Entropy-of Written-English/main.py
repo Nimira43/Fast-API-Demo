@@ -5,12 +5,12 @@
 import re
 
 with open('./books/the-time-machine.txt', 'r', encoding='utf-8') as file:
-  book1 = file.read()
+  book_1 = file.read()
 
-print('CHARACTERS: ', len(book1))
-print('FIRST 2000 CHARACTERS', book1[:2000])
+print('CHARACTERS: ', len(book_1))
+print('FIRST 2000 CHARACTERS: ', book_1[:2000])
 
-strings2replace = [
+strings_to_replace = [
   '\r\n\r\nâ\x80\x9c', 
   'â\x80\x9c',         
   'â\x80\x9d',         
@@ -21,3 +21,9 @@ strings2replace = [
   '_',                 
 ]
 
+for strings_to_match in strings_to_replace :
+  regular_expression = re.compile(r'%s' %strings_to_match)
+  book_1 = regular_expression.sub(' ', book_1)
+  
+print('--------------------------------------')
+print('MODIFIED CHARACTERS (FIRST 2000): ', book_1[:2000])
