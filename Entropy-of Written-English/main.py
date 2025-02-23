@@ -41,6 +41,17 @@ plt.xlabel('Word lengths')
 plt.ylabel('Word count')
 plt.show()
 
+word_counts = np.zeros(20)
+
+for word in words: 
+  word_counts[len(word)] += 1
+
+plt.bar(range(len(word_counts)), word_counts)
+plt.xlabel('Word lengths')
+plt.ylabel('Word count')
+plt.show()
+
+
 
 
 
