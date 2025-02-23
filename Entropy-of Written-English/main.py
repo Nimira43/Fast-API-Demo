@@ -39,6 +39,7 @@ print(letters)
 
 
 # word_lengths = np.zeros(len(words))
+
 # for word_pos in range (len(words)):
 #   word_lengths[word_pos] = len(words[word_pos])
 # plt.hist(word_lengths, bins=30)
