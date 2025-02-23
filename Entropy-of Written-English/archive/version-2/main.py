@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import re
 
-with open('./books/the-time-machine.txt', 'r', encoding='utf-8') as file:
+with open('../../books/the-time-machine.txt', 'r', encoding='utf-8') as file:
   book_1 = file.read()
 
 print('CHARACTERS: ', len(book_1))
@@ -29,7 +29,7 @@ print('CLEANED UP TEXT (FIRST 100 CHARACTERS): ', book_1[:100])
 
 words = book_1.split()
 print('NUMBER OF WORDS: ', len(words))
-print('FIRST 50 WORDS:', words[:50])
+print('FIRST 50 WORDS: ', words[:50])
 
 word_lengths = np.zeros(len(words))
 for word_pos in range (len(words)):
