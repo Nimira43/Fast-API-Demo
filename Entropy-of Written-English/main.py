@@ -26,34 +26,19 @@ for strings_to_match in strings_to_replace :
 book_1 = re.sub(r'\s+', ' ', book_1)
 book_1 = book_1.strip()
 
-print('CLEANED UP TEXT (FIRST 100 CHARACTERS): ', book_1[:100])
-
 words = book_1.split()
 print('NUMBER OF WORDS: ', len(words))
 print('FIRST 50 WORDS: ', words[:50])
 
 letters = string.ascii_lowercase
-print(letters)
+print('NUMBER OF LETTER A IN BOOK: ', book_1.count('a'))
+print('NUMBER OF LETTER M IN BOOK: ', book_1.count('m'))
+print('NUMBER OF LETTER X IN BOOK: ', book_1.count('x'))
+print('NUMBER OF LETTER Z IN BOOK: ', book_1.count('z'))
 
 
 
 
-# word_lengths = np.zeros(len(words))
-
-# for word_pos in range (len(words)):
-#   word_lengths[word_pos] = len(words[word_pos])
-# plt.hist(word_lengths, bins=30)
-# plt.xlabel('Word lengths')
-# plt.ylabel('Word count')
-# plt.show()
-
-# word_counts = np.zeros(20)
-# for word in words: 
-#   word_counts[len(word)] += 1
-# plt.bar(range(len(word_counts)), word_counts)
-# plt.xlabel('Word lengths')
-# plt.ylabel('Word count')
-# plt.show()
 
 
 
