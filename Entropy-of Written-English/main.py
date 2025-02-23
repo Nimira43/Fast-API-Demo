@@ -36,7 +36,11 @@ print('NUMBER OF LETTER M IN BOOK: ', book_1.count('m'))
 print('NUMBER OF LETTER X IN BOOK: ', book_1.count('x'))
 print('NUMBER OF LETTER Z IN BOOK: ', book_1.count('z'))
 
+word_puzzled_count = book_1.lower().count('puzzled')
+word_sphinx_count = book_1.lower().count('sphinx')
 
+print('NUMBER OF WORD "PUZZLED" IN BOOK: ', word_puzzled_count)
+print('NUMBER OF WORD "SPHINX" IN BOOK: ', word_sphinx_count)
 
 
 
