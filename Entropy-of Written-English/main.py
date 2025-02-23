@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import re
+import string
 
 with open('./books/the-time-machine.txt', 'r', encoding='utf-8') as file:
   book_1 = file.read()
@@ -31,21 +32,27 @@ words = book_1.split()
 print('NUMBER OF WORDS: ', len(words))
 print('FIRST 50 WORDS: ', words[:50])
 
-word_lengths = np.zeros(len(words))
-for word_pos in range (len(words)):
-  word_lengths[word_pos] = len(words[word_pos])
-plt.hist(word_lengths, bins=30)
-plt.xlabel('Word lengths')
-plt.ylabel('Word count')
-plt.show()
+letters = string.ascii_lowercase
+print(letters)
 
-word_counts = np.zeros(20)
-for word in words: 
-  word_counts[len(word)] += 1
-plt.bar(range(len(word_counts)), word_counts)
-plt.xlabel('Word lengths')
-plt.ylabel('Word count')
-plt.show()
+
+
+
+# word_lengths = np.zeros(len(words))
+# for word_pos in range (len(words)):
+#   word_lengths[word_pos] = len(words[word_pos])
+# plt.hist(word_lengths, bins=30)
+# plt.xlabel('Word lengths')
+# plt.ylabel('Word count')
+# plt.show()
+
+# word_counts = np.zeros(20)
+# for word in words: 
+#   word_counts[len(word)] += 1
+# plt.bar(range(len(word_counts)), word_counts)
+# plt.xlabel('Word lengths')
+# plt.ylabel('Word count')
+# plt.show()
 
 
 

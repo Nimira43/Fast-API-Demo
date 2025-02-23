@@ -46,25 +46,3 @@ plt.bar(range(len(word_counts)), word_counts)
 plt.xlabel('Word lengths')
 plt.ylabel('Word count')
 plt.show()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
